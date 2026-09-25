@@ -1,0 +1,88 @@
+.gradient-custom {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../img/M3.jfif'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.gradient-custom::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  background-image: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(10px);
+  z-index: 0;
+}
+
+.gradient-custom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+
+.gradient-custom .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.card.bg-dark {
+  background-color: rgba(20, 20, 20, 0.75) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.form-outline {
+  border: 1px solid #fff;
+  border-radius: 12px;
+  padding: 4px;
+  transition: all 0.3s ease;
+}
+
+.form-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-outline input.form-control {
+  color: #fff !important;
+}
+.form-outline .form-label {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.btn-home-back {
+  position: absolute;
+  top: 20px;
+  right: 20px; 
+  z-index: 10;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+.btn-home-back:hover {
+  color: #000;
+  background-color: #fff;
+}
+.btn-outline-light a{
+  color: white;
+}

@@ -1,0 +1,237 @@
+/* Body & Base Layout */
+body {
+  background-color: #f0f2f5 !important;
+  zoom: 115%;
+}
+
+@supports not (zoom: 1) {
+  body {
+    transform: scale(1.15);
+    transform-origin: top center;
+  }
+}
+
+/* Profile Section */
+.profile-section {
+  width: 100%;
+}
+
+.fb-profile-card {
+  border: none;
+  border-radius: 12px;
+}
+
+.cover-photo-container {
+  height: 220px;
+  background-color: #ddd;
+  position: relative;
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edit-cover-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.avatar-wrapper {
+  margin-top: -60px;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-avatar {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border: 4px solid #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Photo Gallery Items */
+.photo-item {
+  height: 120px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.photo-item:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* Floating Navigation Button */
+.btn-home-back {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  z-index: 1050;
+  color: #1877f2;
+  background-color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #e4e6eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.btn-home-back:hover {
+  color: #ffffff;
+  background-color: #1877f2;
+  border-color: #1877f2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+}
+
+@media (max-width: 768px) {
+  .btn-home-back {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* Facebook Sidebar */
+.fb-sidebar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  background-color: #f0f2f5;
+}
+
+.fb-sidebar-item {
+  border-radius: 8px;
+  padding: 8px 10px;
+  transition: background-color 0.2s ease;
+}
+
+.fb-sidebar-item:hover {
+  background-color: #e4e6eb;
+}
+
+.fb-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fb-icon-more {
+  background-color: #e4e6eb;
+  border-radius: 50%;
+}
+
+.fb-sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.fb-sidebar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.fb-sidebar:hover::-webkit-scrollbar-thumb {
+  background-color: #bcc0c4;
+}
+
+/* Facebook Post Card */
+.fb-post-card {
+  background-color: #ffffff;
+}
+
+.post-full-img {
+  height: 260px;
+  object-fit: contain;
+  background-color: #18191a;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.post-full-img:hover {
+  opacity: 0.9;
+}
+
+.fb-action-btn {
+  border-radius: 6px !important;
+  color: #65676b !important;
+  font-size: 0.95rem;
+}
+
+.fb-action-btn:hover {
+  background-color: #f2f2f2 !important;
+  color: #1877f2 !important;
+}
+
+/* Facebook Theme Footer */
+.fb-footer {
+  background-color: #18191a !important;
+  color: #e4e6eb !important;
+}
+
+.fb-footer-heading {
+  color: #1877f2 !important;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.fb-footer-text {
+  color: #b0b3b8 !important;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.fb-footer-link {
+  color: #e4e6eb !important;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.fb-footer-link:hover {
+  color: #1877f2 !important;
+  text-decoration: underline;
+}
+
+.fb-social-icons a {
+  color: #e4e6eb !important;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.fb-social-icons a:hover {
+  color: #1877f2 !important;
+  transform: translateY(-2px);
+}
+
+.fb-copyright {
+  background-color: #242526 !important;
+  color: #b0b3b8 !important;
+  font-size: 0.9rem;
+}
+
+.fb-footer-brand {
+  color: #1877f2 !important;
+}
+
+.fb-footer-brand:hover {
+  color: #42b72a !important;
+}
+
+.border-dark-subtle {
+  border-color: #393a3b !important;
+}

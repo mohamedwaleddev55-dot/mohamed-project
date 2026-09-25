@@ -1,0 +1,199 @@
+body {
+    background-color: #fafafa;
+    color: #262626;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+.insta-sidebar {
+    width: 245px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-right: 1px solid #dbdbdb !important;
+}
+.main-content {
+    margin-left: 245px;
+    min-height: 100vh;
+    position: relative;
+}
+.font-logo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -1px;
+}
+.insta-sidebar .nav-link {
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    font-size: 16px;
+}
+.insta-sidebar .nav-link:hover {
+    background-color: #f2f2f2;
+}
+.profile-avatar-container {
+    display: inline-block;
+    padding: 3px;
+    background: linear-gradient(45deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-radius: 50%;
+}
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+.profile-thumb {
+    object-fit: cover;
+}
+.text-primary-insta {
+    color: #00376b;
+    text-decoration: none;
+}
+.insta-tabs .nav-link {
+    color: #8e8e8e;
+    border: none !important;
+    border-top: 1px solid transparent !important;
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 15px 0;
+    margin: 0 20px;
+    background: transparent !important;
+}
+.insta-tabs .nav-link.active {
+    color: #000 !important;
+    border-top: 1px solid #000 !important;
+}
+.container-article {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; 
+    overflow: hidden;
+    background-color: #efefef;
+}
+.container-article .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-article:hover .overlay {
+    opacity: 1;
+}
+.text {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.video-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 14px;
+    z-index: 2;
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+.btn-home-back {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+    color: #262626;
+    background-color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #dbdbdb;
+    transition: all 0.2s ease;
+}
+.btn-home-back:hover {
+    background-color: #fafafa;
+    color: #000;
+}
+:root {
+  --insta-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Gradient Text for Logo */
+.insta-gradient-text {
+  background: var(--insta-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.insta-btn-active {
+  background: var(--insta-gradient) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(220, 39, 67, 0.25);
+  border-radius: 10px;
+}
+.insta-sidebar .nav-link:not(.insta-btn-active):hover {
+  background-color: #f2f2f2;
+  color: #dc2743 !important;
+}
+
+/* Profile Image Border Ring */
+.insta-avatar-ring {
+  padding: 2px;
+  background: var(--insta-gradient);
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (max-width: 767.98px) {
+    .insta-sidebar {
+        width: 100%;
+        height: 50px;
+        top: auto;
+        bottom: 0;
+        border-right: none !important;
+        border-top: 1px solid #dbdbdb !important;
+        padding: 0 !important;
+    }
+    .insta-sidebar .top-nav {
+        width: 100%;
+    }
+    .insta-sidebar .nav-pills {
+        flex-direction: row !important;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+    }
+    .insta-sidebar .nav-link {
+        padding: 8px;
+    }
+    .main-content {
+        margin-left: 0;
+        margin-bottom: 60px;
+    }
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    .profile-stats {
+        font-size: 14px;
+    }
+}
