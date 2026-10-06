@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Title</title>
+    <link rel="icon" href="images/my-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.3.0/mdb.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body{
+        background-image:url(img/m22.jfif) ;    
+      background-repeat: no-repeat;           
+      background-size: cover;                
+     background-position: center;            
+     background-attachment: fixed;  
+      }
+      .my-hover-icon-nav a:hover {
+        color: #e60000 !important;
+        transform: scale(1.1);
+        transition: all 0.2s;
+      }
+      .HIT a:hover{
+         color: #e60000 !important;
+        transform: scale(1.1);
+        transition: all 0.2s;
+      }
+
+      :root {
+    --sidebar-width: 280px;
+    --sidebar-width-collapsed: 80px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1c2e 0%, #16181f 100%);
+    transition: all 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-width-collapsed);
+}
+
+.sidebar-link {
+    color: #a0a3bd;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    margin: 4px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.sidebar-link.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.logo-text {
+    background: linear-gradient(45deg, #6b8cff, #8b9fff);
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.3s ease;
+}
+
+.notification-badge {
+    background: #ff6b6b;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+}
+
+.profile-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.collapsed~.main-content {
+    margin-left: var(--sidebar-width-collapsed);
+}
+
+.toggle-btn {
+    position: absolute;
+    right: -15px;
+    top: 20px;
+    background: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.collapsed .toggle-btn {
+    transform: rotate(180deg);
+}
+
+.collapsed .hide-on-collapse {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.collapsed .logo-text {
+    opacity: 0;
+}
+
+.collapsed .profile-info {
+    opacity: 0;
+}
+
+.collapsed .sidebar-link {
+    text-align: center;
+    padding: 1rem !important;
+    margin: 4px 8px;
+}
+
+.collapsed .sidebar-link i {
+    margin: 0 !important;
+}
+
+.profile-info {
+    transition: opacity 0.2s ease;
+}
+  .input-group i:hover{
+    color: black !important;
+        transform: scale(1.1);
+        transition: all 0.2s;
+        
+
+  }
+  .tit-hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;  
+        flex-direction: column;    
+        }
+        .pppp{
+          font-size: 30px;
+          font-weight: bold;
+          color: rgb(245, 240, 240);
+          font-style: oblique;
+        }
+        .tit-head{
+          font-size: 50px;
+          font-weight: bold;
+          color: rgb(255, 253, 253);
+          font-style: oblique;
+        }
+          .snap-tit{
+            color: red;
+          }
+            .tit-p{
+              font-size: 20px;
+              color: #fdfafa;
+            }
+            
+    </style>
+  </head>
+  <body>
+    <!-- Start your project here -->
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg "data-bs-theme="dark" style="background-color: #050505; padding-left: 80px; padding-right: 80px;">
+   
+      <div class="container-fluid justify-content-between">
+        <!-- Left elements -->
+        <div class="d-flex">
+          <!-- Brand -->
+          <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+            <img
+              src="img/m1.jfif"
+              height="50"
+              width="50"
+              class="rounded-circle"
+              alt="my-logo"
+              loading="lazy"
+              style="margin-top: 2px; object-fit: cover;"
+            />
+          </a>
+
+          <!-- Search form -->
+          <form class="input-group w-200 my-auto d-none d-sm-flex">
+            <input
+              autocomplete="off"
+              type="search"
+              class="form-control rounded"
+              placeholder="Search"
+              style="min-width: 700px;"
+            />
+            <button class="input-group-text border-0 d-none d-lg-flex text-light bg-danger">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <!-- Left elements -->
+
+        <!-- Center elements -->
+        <ul class="navbar-nav flex-row d-none d-md-flex ms-auto my-hover-icon-nav">
+          <li class="nav-item me-3 me-lg-1 active">
+            <a class="nav-link text-light" href="#">
+              <span><i class="fas fa-home fa-lg"></i></span>
+              <span class="badge rounded-pill badge-notification bg-danger">1</span>
+            </a>
+          </li>
+
+          <li class="nav-item me-3 me-lg-1">
+            <a class="nav-link text-light" href="#">
+              <span><i class="fas fa-shopping-bag fa-lg"></i></span>
+            </a>
+          </li>
+
+          <li class="nav-item dropdown me-3 me-lg-1">
+            <a
+              data-mdb-dropdown-init
+              class="nav-link dropdown-toggle hidden-arrow text-light"
+              href="#"
+              id="messagesDropdown"
+              role="button"
+              aria-expanded="false"
+            >
+              <i class="fas fa-comments fa-lg"></i>
+              <span class="badge rounded-pill badge-notification bg-danger">6</span>
+            </a>
+          </li>
+
+          <li class="nav-item dropdown me-3 me-lg-1">
+            <a
+              data-mdb-dropdown-init
+              class="nav-link dropdown-toggle hidden-arrow text-light"
+              href="#"
+              id="notificationsDropdown"
+              role="button"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell fa-lg"></i>
+              <span class="badge rounded-pill badge-notification bg-danger">12</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Center elements -->
+
+        <!-- Right elements -->
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item me-3 me-lg-1">
+            <a class="nav-link d-sm-flex align-items-sm-center text-light" href="#">
+              <img
+                src="img/m2.jpg"
+                class="rounded-circle"
+                height="33"
+                width="33"
+                alt="Create Account Icon"
+                loading="lazy"
+                style="object-fit: cover;"
+              />
+              <strong class="d-none d-sm-block ms-1">Create account</strong>
+            </a>
+          </li>
+        </ul>
+        <!-- Right elements -->
+      </div>
+    </nav>
+<div class="tit-hero">
+    <h3 class="pppp">Technology that moves you forward</h3>
+    <h1 class="tit-head">Build what’s next with <snap class="snap-tit">TechFlow</snap> </h1>
+    <p class="tit-p">Smart, secure solutions to help your team work faster and grow with confidence.</p>
+</div>
+
+
+  <section class="section-card">
+    <div class="card">
+    <div class="card-img">
+      <img src="#" alt="#">
+</div>
+<div class="card-title">
+  <h1>name for product</h1>
+  <p>kfjihbhafi;uhf;quhf;ufhqf</p>
+  <span>2,000$</span>
+</div>
+<div class="card-actions">
+      <a href="#" class="btn-buy">شراء الآن</a>
+    </div>
+    </div>
+  </section>
+  
+
+
+    <!-- Footer -->
+<footer class="text-center text-lg-start text-white" style="background-color: #0d0d0d; font-family: sans-serif;">
+  <!-- Section: Social media -->
+  <section class=" HIT d-flex justify-content-center justify-content-lg-between p-4 border-bottom border-secondary border-opacity-25 px-4 px-lg-5">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block fw-semibold">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-white text-decoration-none social-icon">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-white text-decoration-none social-icon">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-white text-decoration-none social-icon">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-white text-decoration-none social-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-white text-decoration-none social-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-white text-decoration-none social-icon">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links -->
+  <section class="py-2">
+    <div class="container text-center text-md-start mt-5 px-4">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 text-white">
+            <i class="fas fa-gem me-3" style="color: #e63946;"></i>TECHFLOW
+          </h6>
+          <p class="text-white-50">
+            Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 text-white border-bottom border-danger pb-2 d-inline-block" style="border-color: #e63946 !important;">
+            Products
+          </h6>
+          <p><a href="#!" class="footer-link">Angular</a></p>
+          <p><a href="#!" class="footer-link">React</a></p>
+          <p><a href="#!" class="footer-link">Vue</a></p>
+          <p><a href="#!" class="footer-link">Laravel</a></p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 text-white border-bottom border-danger pb-2 d-inline-block" style="border-color: #e63946 !important;">
+            Useful links
+          </h6>
+          <p><a href="#!" class="footer-link">Pricing</a></p>
+          <p><a href="#!" class="footer-link">Settings</a></p>
+          <p><a href="#!" class="footer-link">Orders</a></p>
+          <p><a href="#!" class="footer-link">Help</a></p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 text-white border-bottom border-danger pb-2 d-inline-block" style="border-color: #e63946 !important;">
+            Contact
+          </h6>
+          <p class="text-white-50"><i class="fas fa-home me-3" style="color: #e63946;"></i> New York, NY 10012, US</p>
+          <p class="text-white-50"><i class="fas fa-envelope me-3" style="color: #e63946;"></i> info@example.com</p>
+          <p class="text-white-50"><i class="fas fa-phone me-3" style="color: #e63946;"></i> + 01 234 567 88</p>
+          <p class="text-white-50"><i class="fas fa-print me-3" style="color: #e63946;"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4 border-top border-secondary border-opacity-25 text-white-50" style="background-color: #050505;">
+    © 2026 Copyright:
+    <a class="fw-bold text-white text-decoration-none hover-red">TECHFLOW.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    <!-- End your project here -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.3.0/mdb.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.0/dist/js/coreui.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
